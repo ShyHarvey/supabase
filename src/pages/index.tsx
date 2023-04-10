@@ -1,3 +1,4 @@
+import { DashboardSection } from '@/components/DashboardSection/DashboardSection'
 import { StartProjectSection } from '@/components/StartProjectSection'
 import { StoreSection } from '@/components/StoreSection'
 import { Layout } from '@/components/layout/Layout'
@@ -14,8 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <main className='container relative px-6 py-16 mx-auto md:py-24 lg:px-16 lg:py-24 xl:px-20'>
+        <main className='container relative px-6 mx-auto lg:px-16 xl:px-20'>
           <StoreSection />
+          <DashboardSection />
+
+
           <StartProjectSection />
         </main>
       </Layout>

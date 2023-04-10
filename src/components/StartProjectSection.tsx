@@ -3,7 +3,7 @@ import React from 'react'
 
 export const StartProjectSection: React.FC<{}> = () => {
     return (
-        <div className="grid items-center grid-cols-12 gap-4 pt-32 text-center">
+        <div className="grid items-center grid-cols-12 gap-4 pt-16 text-center lg:pt-24">
             <div className="col-span-12">
                 <h2 className="text-3xl">
                     <span className="text-sup-500">Build in a weekend,</span><span className="text-scale-1200 dark:text-white"> scale to millions</span>
