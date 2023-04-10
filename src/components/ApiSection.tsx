@@ -61,12 +61,12 @@ export const ApiSection: React.FC<{}> = () => {
                                 <pre className="w-full rounded-lg">
                                     <code className="language-js">
                                         <span>
-                                        </span><span></span><span className='text-green-700'>// Upload an image to the "avatars" bucket</span><span><br />
+                                        </span><span></span><span className='text-green-700'>&#47;&#47; Upload an image to the &ldquo;avatars&rdquo; bucket</span><span><br />
                                         </span><span></span><span className='text-blue-400'>const</span> <span className='text-white'> spaceCat = event.target.files[</span><span className='text-white'>0]</span><span><br />
                                         </span><span></span><span className='text-blue-400'>const</span> <span className='text-white'> {'data, error'} = </span><span className='text-blue-400'>await</span><span className='text-white'> supabase<br />
                                         </span> <span className='text-white'> .storage</span><br />
-                                        <span className='text-white'>  .from(</span> <span className='text-green-600'>'avatars'</span> <span className='text-white'>)<br />
-                                        </span><span className='text-white'>  .upload(</span><span className='text-green-600'>'space-cat.png'</span> <span className='text-white'>, spaceCat)<br />
+                                        <span className='text-white'>  .from(</span> <span className='text-green-600'>&lsquo;avatars&rsquo;</span> <span className='text-white'>)<br />
+                                        </span><span className='text-white'>  .upload(</span><span className='text-green-600'>&lsquo;space-cat.png&rsquo;</span> <span className='text-white'>, spaceCat)<br />
                                         </span>
                                     </code>
                                 </pre>

@@ -43,9 +43,9 @@ export const AuthSection: React.FC<{}> = () => {
                                 </button>
                                 <pre className="w-full rounded-lg">
                                     <code className="language-sql">
-                                        <span className='text-blue-400'>create</span><span className='text-white'> policy "Public Access"<br />
+                                        <span className='text-blue-400'>create</span><span className='text-white'> policy &ldquo;Public Access&rdquo;<br />
                                         </span><span></span><span className='text-blue-400'>on</span><span className='text-white'> storage.objects </span><span className='text-blue-400'>for all</span><span><br />
-                                        </span><span></span><span className='text-blue-400'>using</span><span className='text-white'> ( bucket_id = <span className='text-green-600'>'avatars'</span> ); </span><br />
+                                        </span><span></span><span className='text-blue-400'>using</span><span className='text-white'> ( bucket_id = <span className='text-green-600'>&lsquo;avatars&rsquo;</span> ); </span><br />
                                     </code>
                                 </pre>
                             </Tab.Panel>

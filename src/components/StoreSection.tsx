@@ -52,7 +52,7 @@ export const StoreSection: React.FC<{}> = () => {
                     <ChartBarIcon width={21} height={21} className='my-2 fill-sup-900 dark:fill-sup-500' />
                     <p className='mt-4 text-lg'>Lightning fast</p>
                     <p className='mt-5 text-lg'>
-                        Thin API server layer that leverages Postgres' permissions and performance.
+                        Thin API server layer that leverages Postgres permissions and performance.
                     </p>
                 </div>
                 <div className='max-w-xs'>
