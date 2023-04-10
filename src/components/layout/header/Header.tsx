@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import logoLight from '../../../../public/images/logoLight.webp'
 import logoDark from '../../../../public/images/logoDark.webp'
-import { Bars3Icon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid'
+import { Bars3Icon, ChevronDownIcon } from '@heroicons/react/24/solid'
+import { Popover, Transition } from '@headlessui/react'
 
 export const Header: React.FC<{ colorMode: string }> = ({ colorMode }) => {
 
@@ -12,9 +13,28 @@ export const Header: React.FC<{ colorMode: string }> = ({ colorMode }) => {
         <header className='sticky top-0 z-50 flex items-center justify-between h-16 bg-white dark:bg-sup-900'>
             <nav className='flex justify-between h-16 mx-auto lg:container lg:px-16 xl:px-20'>
                 <div className='absolute left-4 top-4 lg:hidden'>
-                    <button>
-                        <Bars3Icon width={30} height={30} className='stroke-2 fill-sup-700 hover:fill-sup-500' />
-                    </button>
+                    <Popover className="relative">
+                        <Popover.Button
+                            className={'outline-none border-none hover:text-sup-500 hover:cursor-pointer'}
+                        >
+                            <Bars3Icon width={30} height={30} className='stroke-2 fill-sup-700 hover:fill-sup-500' />
+                        </Popover.Button>
+                        <Transition
+                            as={Fragment}
+                            enter="transition ease-out duration-200"
+                            enterFrom="opacity-0 translate-y-0"
+                            enterTo="opacity-100 translate-y-1"
+                            leave="transition ease-in duration-150"
+                            leaveFrom="opacity-100 translate-y-1"
+                            leaveTo="opacity-0 translate-y-0"
+                        >
+                            <Popover.Panel className="absolute z-10 bg-white rounded-lg p-7 dark:bg-sup-900 top-11 ">
+                                <div className="flex flex-col gap-3">
+                                    <p className='text-xl animate-bounce hover:animate-spin'>Empty menu</p>
+                                </div>
+                            </Popover.Panel>
+                        </Transition>
+                    </Popover>
                 </div>
                 <div className='flex items-center gap-3 lg:justify-start'>
                     <Link href='/'>
@@ -28,12 +48,58 @@ export const Header: React.FC<{ colorMode: string }> = ({ colorMode }) => {
                     </Link>
 
                     <div className='hidden gap-4 ml-10 lg:flex'>
-                        <div className='inline-flex items-center py-5 text-sm hover:text-sup-500 hover:cursor-pointer'>
-                            <span>Product</span> <ChevronDownIcon width={20} height={14} />
-                        </div>
-                        <div className='inline-flex items-center py-5 text-sm hover:text-sup-500 hover:cursor-pointer'>
-                            <span>Developers</span> <ChevronUpIcon width={20} height={14} />
-                        </div>
+
+                        <Popover className="relative inline-flex items-center">
+                            <Popover.Button
+                                className={'inline-flex items-center outline-none border-none py-5 text-sm hover:text-sup-500 hover:cursor-pointer'}
+                            >
+                                Product <ChevronDownIcon width={20} height={14} />
+                            </Popover.Button>
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-0"
+                                enterTo="opacity-100 translate-y-1"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-1"
+                                leaveTo="opacity-0 translate-y-0"
+                            >
+                                <Popover.Panel className="absolute z-10 bg-white rounded-lg p-7 dark:bg-sup-900 top-11 ">
+                                    <div className="flex flex-col gap-3">
+                                        <Link className='hover:text-sup-500' href="/">Analytics</Link>
+                                        <Link className='hover:text-sup-500' href="/">Engagement</Link>
+                                        <Link className='hover:text-sup-500' href="/">Security</Link>
+                                        <Link className='hover:text-sup-500' href="/">Integrations</Link>
+                                    </div>
+                                </Popover.Panel>
+                            </Transition>
+                        </Popover>
+
+                        <Popover className="relative inline-flex items-center">
+                            <Popover.Button
+                                className={'inline-flex items-center outline-none border-none py-5 text-sm hover:text-sup-500 hover:cursor-pointer'}
+                            >
+                                Developers <ChevronDownIcon width={20} height={14} />
+                            </Popover.Button>
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-0"
+                                enterTo="opacity-100 translate-y-1"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-1"
+                                leaveTo="opacity-0 translate-y-0"
+                            >
+                                <Popover.Panel className="absolute z-10 bg-white rounded-lg p-7 dark:bg-sup-900 top-11 ">
+                                    <div className="flex flex-col gap-3">
+                                        <Link className='hover:text-sup-500' href="/">Analytics</Link>
+                                        <Link className='hover:text-sup-500' href="/">Engagement</Link>
+                                        <Link className='hover:text-sup-500' href="/">Security</Link>
+                                        <Link className='hover:text-sup-500' href="/">Integrations</Link>
+                                    </div>
+                                </Popover.Panel>
+                            </Transition>
+                        </Popover>
                         <Link href={'/'}
                             className='inline-flex items-center py-5 text-sm border-t-2 border-b-2 border-transparent text-scale-1200 hover:text-sup-500 hover:border-b-sup-500'>
                             Beta

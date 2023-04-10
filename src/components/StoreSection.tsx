@@ -52,14 +52,14 @@ export const StoreSection: React.FC<{}> = () => {
                     <ChartBarIcon width={21} height={21} className='my-2 fill-sup-900 dark:fill-sup-500' />
                     <p className='mt-4 text-lg'>Lightning fast</p>
                     <p className='mt-5 text-lg'>
-                        Integrates well with the rest of Supabase ecosystem, including Auth and Postgres.
+                        Thin API server layer that leverages Postgres' permissions and performance.
                     </p>
                 </div>
                 <div className='max-w-xs'>
                     <DocumentCheckIcon width={21} height={21} className='my-2 stroke-sup-900 dark:stroke-sup-500' />
-                    <p className='mt-4 text-lg'>Interoperable</p>
+                    <p className='mt-4 text-lg'>Dependable</p>
                     <p className='mt-5 text-lg'>
-                        Integrates well with the rest of Supabase ecosystem, including Auth and Postgres.
+                        Enterprise-level scalability and durability.
                     </p>
                 </div>
             </div>

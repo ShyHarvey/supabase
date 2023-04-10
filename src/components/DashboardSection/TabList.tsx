@@ -14,7 +14,7 @@ export const TabList: React.FC<{}> = () => {
 
     return (
         <Tab.Group >
-            <Tab.List className="absolute z-50 flex justify-between gap-3 -top-3 ">
+            <Tab.List className="absolute z-50 flex flex-wrap justify-between w-full gap-3 -top-14 sm:-top-3 lg:-top-14 xl:-top-3">
                 {dashboardFunctions.map((item, index) =>
                     <Tab onClick={() => swiper.slideTo(index)} key={index} className={({ selected }) =>
                         classNames(

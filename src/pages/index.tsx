@@ -1,3 +1,5 @@
+import { ApiSection } from '@/components/ApiSection'
+import { AuthSection } from '@/components/AuthSection'
 import { DashboardSection } from '@/components/DashboardSection/DashboardSection'
 import { StartProjectSection } from '@/components/StartProjectSection'
 import { StoreSection } from '@/components/StoreSection'
@@ -18,8 +20,8 @@ export default function Home() {
         <main className='container relative px-6 mx-auto lg:px-16 xl:px-20'>
           <StoreSection />
           <DashboardSection />
-
-
+          <ApiSection />
+          <AuthSection />
           <StartProjectSection />
         </main>
       </Layout>

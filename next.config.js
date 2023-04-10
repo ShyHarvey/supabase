@@ -3,7 +3,7 @@ const path = require('path');
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['supabase.com'],
+    domains: ['supabase.com', 'vercel.com'],
   },
 }
 
