@@ -1,6 +1,7 @@
 import { FC, PropsWithChildren, useState, useEffect } from 'react'
 import { Header } from './header/Header'
 import { Footer } from './footer/Footer'
+import Spline from '@splinetool/react-spline';
 
 
 export const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
@@ -19,6 +20,7 @@ export const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
     return (
         <>
             <Header colorMode={colorMode} />
+            <Spline className='fixed w-full h-full' scene="https://prod.spline.design/iHwYlle3guBP1P5e/scene.splinecode" />
             <div className='flex-1'>
                 {children}
             </div>
